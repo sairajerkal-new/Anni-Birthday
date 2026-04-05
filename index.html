@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Surprise for Anni 🥳</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- START PAGE/FIRST PAGE -->
+
+  <div id="startPage" class="page show">
+
+    <h1>I have a surprise for you 👀</h1>
+
+    <img src="anni_childhood.jpeg" class="homeImage">
+
+    <h2 style="color:burlywood;">Click the below button to open your surprise.🥳❤️</h2>
+
+    <button onclick="openSite()">Open Your Surprise 🎁</button>
+
+  </div>
+
+
+  <!-- MAIN WEBSITE/SECOND PAGE -->
+
+  <div id="mainSite" class="page">
+    <button class="nav-back-btn" onclick="backToStart()">⬅️ Back</button>
+
+    <h1>Happiest Birthday Anni 🎂</h1>
+
+    <h2>Our Memories Togethere</h2>
+
+    <div class="memoryImages">
+
+      <img src="our_memories_2.jpeg">
+
+    </div>
+
+
+    <h3>We have other memories too but they all are online and in texts 😭.<br>I just can't add all of them here 😭
+      there are so many 🥲</h3>
+
+    <h2>Ps: This is the only one proper picture we have togethere 🥲</h2>
+
+    <div class="timeline">
+
+      <div>
+        <b>The day we first met</b><br>26 June 2024
+        was the day our crazy friendship started.🤩
+      </div>
+
+    </div>
+
+    <div style="z-index: 10; position: relative;">
+      <button onclick="openHelloPage()">Next 👀👆</button>
+    </div>
+
+    <!-- Balloons -->
+
+    <div class="balloons">
+
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+
+    </div>
+
+  </div>
+
+  <!-- HELLO WEBSITE/THIRD PAGE -->
+  <div id="helloPage" class="page">
+    <button class="nav-back-btn" onclick="backToMainFromHello()">⬅️ Back</button>
+    <p id="giftMessage" style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">A photo gallery for you ❤️‍🩹
+    </p>
+    <p style="font-size: 18px; margin-bottom: 15px;">Tap on the gift box to open it 🎁👀❤️</p>
+    <p id="fullscreenHint" style="display: none; font-size: 14px; margin-bottom: 30px; font-style: italic;">You can also
+      open the image in fullscreen by tapping on it.</p>
+
+    <div class="gift-wrapper" onclick="triggerPhotos(this)">
+      <div class="gift-box">
+        <div class="gift-lid"></div>
+        <div class="gift-body"></div>
+      </div>
+    </div>
+
+    <div id="photoContainer">
+      <!-- 24 flip cards -->
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard1.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard2.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard3.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcrd4.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/lipcard5.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard6.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard7.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard8.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard9.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard10.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard11.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard12.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard13.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard14.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard15.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard16.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard17.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard18.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard19.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard20.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard21.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard22.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard23.jpeg"></div>
+        </div>
+      </div>
+      <div class="flip-card pop-photo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">🎁</div>
+          <div class="flip-card-back"><img src="images/flipcard24.jpeg"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="z-index: 10; position: relative; display: flex; justify-content: center; margin-top: 40px; margin-bottom: 20px; width: 100%;">
+      <button onclick="openFourthPage()">Next ✨</button>
+    </div>
+
+  </div>
+
+  <!-- FOURTH PAGE -->
+  <div id="fourthPage" class="page">
+    <button class="nav-back-btn" onclick="backToHelloFromFourth()">⬅️ Back</button>
+    <h1>Just for you 💖</h1>
+    <img src="images/last page image.jpeg"
+      style="max-width: 90%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.5); margin-top: 20px;">
+
+    <div style="z-index: 10; position: relative; margin-top: 20px;">
+      <button onclick="openFifthPage()">Next ✨</button>
+    </div>
+  </div>
+
+  <!-- FIFTH PAGE -->
+  <div id="fifthPage" class="page">
+    <button class="nav-back-btn" onclick="backToFourthFromFifth()">⬅️ Back</button>
+
+    <h1>One Last Thing... 🥺</h1>
+
+    <p
+      style="font-size: 22px; max-width: 600px; margin: 30px auto; line-height: 1.6; padding: 0 20px; background: rgba(255,255,255,0.2); border-radius: 15px; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      Thank you for all the amazing memories and for always supporting me I can't wait to make more memories together
+      with you. ❤️<br><br>
+      Happiest Birthday Amrutha 🥳❤️🥺
+    </p>
+
+    <div style="font-size: 20px; font-weight: bold; text-align: center; margin-top: 50px;">
+      All these efforts and website built <br>By your Goobe (Sairaj) 🤪🤭❤️<br> Ok Bye!! 👋 Hope you read and see
+      everything till here 😅😉😂😂
+    </div>
+
+    <div
+      style="z-index: 10; position: relative; margin-top: 40px; display: flex; justify-content: center; padding-bottom: 40px;">
+      <button onclick="goToStartFromFifth()">Go to Main Page 🏠</button>
+    </div>
+  </div>
+
+  <!-- Photo Modal -->
+  <div id="photoModal" onclick="closePhoto()">
+    <img id="modalImage" src="">
+  </div>
+
+  <script src="script.js"></script>
+
+
+
+</body>
+
+</html>

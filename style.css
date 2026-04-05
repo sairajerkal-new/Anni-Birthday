@@ -1,0 +1,512 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #ff6f91;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Global Image Reset */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* page layout */
+
+.page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 40px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.show {
+  opacity: 1;
+}
+
+#mainSite {
+  display: none;
+}
+
+/* Home Image */
+.homeImage {
+  max-width: 90%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  margin: 15px 0;
+}
+
+/* start page background image */
+
+#startPage {
+  justify-content: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("anni_childhood.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+/* timeline */
+
+.timeline {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.timeline div {
+  background: white;
+  color: #ff4e8a;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.memoryImages {
+
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+
+.memoryImages img {
+
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+
+  border-radius: 15px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+/* balloons */
+
+.balloons {
+  position: fixed;
+  bottom: -120px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.balloon {
+  width: 50px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  animation: float linear infinite;
+}
+
+.balloon:nth-child(1) {
+  left: 10%;
+  background: #ff4e8a;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+.balloon:nth-child(2) {
+  left: 30%;
+  background: #ffd93d;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.balloon:nth-child(3) {
+  left: 50%;
+  background: #6bcB77;
+  animation-duration: 4.5s;
+  animation-delay: 0.5s;
+}
+
+.balloon:nth-child(4) {
+  left: 70%;
+  background: #4d96ff;
+  animation-duration: 6s;
+  animation-delay: 1.5s;
+}
+
+.balloon:nth-child(5) {
+  left: 90%;
+  background: #ff6b6b;
+  animation-duration: 5s;
+  animation-delay: 1s;
+
+  .balloon:nth-child(2) {
+    animation-direction: alternate;
+  }
+
+  .balloon:nth-child(4) {
+    animation-direction: alternate;
+  }
+
+
+}
+
+/* balloon strings */
+
+.balloon::after {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  width: 2px;
+  height: 80px;
+  background: white;
+  transform: translateX(-50%);
+}
+
+.balloon:nth-child(1) {
+  left: 10%;
+  background: #ff4e8a;
+}
+
+.balloon:nth-child(2) {
+  left: 30%;
+  background: #ffd93d;
+}
+
+.balloon:nth-child(3) {
+  left: 50%;
+  background: #6bcB77;
+}
+
+.balloon:nth-child(4) {
+  left: 70%;
+  background: #4d96ff;
+}
+
+.balloon:nth-child(5) {
+  left: 90%;
+  background: #ff6b6b;
+}
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  25% {
+    transform: translateY(-30vh) translateX(10px);
+  }
+
+  50% {
+    transform: translateY(-60vh) translateX(-10px);
+  }
+
+  75% {
+    transform: translateY(-90vh) translateX(10px);
+  }
+
+  100% {
+    transform: translateY(-120vh) translateX(0);
+  }
+
+}
+
+
+/* button */
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #ff4e8a;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.nav-back-btn {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  margin-top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+/* Hello Page, Fourth Page & Fifth Page */
+#helloPage, #fourthPage, #fifthPage {
+  display: none;
+  justify-content: flex-start;
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+/* Gift Box */
+.gift-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 30px auto;
+  cursor: pointer;
+  perspective: 1000px;
+  z-index: 10;
+}
+
+.gift-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gift-lid {
+  width: 140px;
+  height: 35px;
+  background: #ff4e8a;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  top: 5px;
+  transition: transform 0.6s ease;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+}
+
+.gift-lid::before {
+  content: "🎀";
+  font-size: 50px;
+  position: absolute;
+  top: -35px;
+}
+
+.gift-lid::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background: white;
+}
+
+.gift-body {
+  width: 120px;
+  height: 100px;
+  background: #ff4e8a;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  border: 2px solid white;
+  border-top: none;
+}
+
+.gift-body::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background: white;
+}
+
+/* Open states: intense shake then pop */
+.gift-wrapper.open .gift-box {
+  animation: intense-shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.gift-wrapper.open .gift-lid {
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.8s;
+  transform: translateY(-150px) rotate(-25deg) scale(1.2);
+  opacity: 0;
+}
+
+.gift-wrapper.open .gift-body {
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.8s;
+  transform: translateY(100px) scale(0.9);
+  opacity: 0;
+}
+
+@keyframes intense-shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-12px) rotate(-6deg);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(12px) rotate(6deg);
+  }
+}
+
+/* Pop Photos & Flip Cards */
+#photoContainer {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  z-index: 5;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 28px; }
+  h2 { font-size: 22px; }
+  h3 { font-size: 16px; }
+  
+  .page {
+    padding: 20px 10px;
+  }
+  
+  #photoContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .flip-card-front {
+    font-size: 30px;
+  }
+  
+  .balloon {
+    width: 40px;
+    height: 55px;
+  }
+  
+  .gift-wrapper {
+    transform: scale(0.85);
+  }
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  perspective: 1000px;
+  opacity: 0;
+  transform: translateY(-50px) scale(0);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.flip-card.launched {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+/* Flip class added via JS */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.flip-card-front {
+  background-color: white;
+  color: #ff4e8a;
+  font-size: 40px;
+  border: 4px solid white;
+}
+
+.flip-card-back {
+  background-color: white;
+  transform: rotateY(180deg);
+  border: 4px solid white;
+  overflow: hidden;
+}
+
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Photo Modal */
+#photoModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#photoModal img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
